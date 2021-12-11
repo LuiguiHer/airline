@@ -1,0 +1,54 @@
+<div class="container">
+    <h3 class="center-align">Edit Airport</h3>
+  
+
+<form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="edit()">
+    <input formControlName="id" type="hidden" class="validate">
+    <div class="row">
+      <div class="input-field col s6">
+        <input formControlName="name" type="text" class="validate">
+        <label class="active" for="name">Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input formControlName="city" type="text" class="validate">
+        <label class="active" for="city">City</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="country" type="text" class="validate">
+        <label class="active" for="country">Country</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="coordinateX" type="number" class="validate">
+        <label class="active" for="coordinateX">CoordinateX</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="coordinateY" type="number" class="validate">
+        <label class="active" for="coordinateY">CoordinateY</label>
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="acronym" type="text" class="validate">
+          <label class="active" for="acronym">Acronym</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="type" type="text" class="validate">
+          <label class="active" for="type">Type</label>
+        </div>
+      </div>
+ 
+    <div class="row center-align">
+      <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </form>
+</div>

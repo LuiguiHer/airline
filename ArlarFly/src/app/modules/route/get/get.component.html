@@ -1,0 +1,28 @@
+<div class="container">
+    <br>
+    <a routerLink="/route/create" class="btn">Registrar Ruta</a>
+   
+    <table class="table responsive">
+      <thead>
+        <tr>
+            <th>Tiempo estimado</th>
+            <th>Origen</th>
+            <th>Destino</th>
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>{{p.Time}}</td>
+          <td>{{p.origin}}</td>
+          <td>{{p.destiny}}</td>
+          <td>
+            <a routerLink="/route/edit/{{p.id}}" class="btn">Editar</a>
+            <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  
+

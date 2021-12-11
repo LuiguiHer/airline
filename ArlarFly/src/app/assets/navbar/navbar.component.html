@@ -1,0 +1,17 @@
+<nav>
+    <div class="nav-wrapper white">
+      <a href="#" class="brand-logo"><img src="https://luher.tech/images/Arlar.png" alt=""></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li *ngIf="activeSession"><a routerLink="/admin/get">User</a></li>
+        <li *ngIf="activeSession"><a routerLink="/airport/get">Airport</a></li>
+        <li *ngIf="activeSession"><a routerLink="/flight/get">Flight</a></li>
+        <li *ngIf="activeSession"><a routerLink="/route/get">route</a></li>
+
+
+
+      <li *ngIf="!activeSession"><a routerLink="/security/login">Login</a></li>
+      <li *ngIf="!activeSession"><a routerLink="/admin/create">Sing in</a></li>
+      <li *ngIf="activeSession"><a routerLink="/security/sign-off">Logout</a></li>
+      </ul>
+    </div>
+  </nav>

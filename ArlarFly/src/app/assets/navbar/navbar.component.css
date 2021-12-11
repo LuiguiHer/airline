@@ -1,0 +1,22 @@
+nav{
+    background-color: rgb(255, 255, 255);
+    padding: 0 30px;
+    height: 62px;
+    box-shadow: none;
+    box-shadow: 2px 2px 20px 1px rgba(160, 167, 199, 0.2);
+}
+nav ul li a{
+    color: black;
+    border-radius: 10px;
+    transition: 69ms;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    
+}
+nav img{
+    margin-left: 60px;
+    width:130px;
+}

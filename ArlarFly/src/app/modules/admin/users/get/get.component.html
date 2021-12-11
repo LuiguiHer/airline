@@ -1,0 +1,31 @@
+<div class="container">
+    <br>
+    <a routerLink="/admin/create" class="btn">Register a new user</a>
+   
+    <table class="table responsive">
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>{{p.name}}</td>
+          <td>{{p.lastname}}</td>
+          <td>{{p.email}}</td>
+          <td>{{p.phone}}</td>
+          <td>
+            <a routerLink="/admin/edit/{{p.id}}" class="btn">Edit</a>
+            <button class="btn red" (click)="delete(p.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  
+

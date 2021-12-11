@@ -1,0 +1,36 @@
+<div class="container">
+    <br>
+    <a routerLink="/airport/create" class="btn">Registrar Aeropuerto</a>
+   
+    <table class="table responsive">
+      <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Ciudad</th>
+            <th>Pais</th>
+            <th>Coord_x</th>
+            <th>Coord_y</th>
+            <th>Siglas</th>
+            <th>Tipo</th>
+        </tr>
+      </thead>
+   
+      <tbody>
+        <tr *ngFor="let p of listado">
+          <td>{{p.name}}</td>
+          <td>{{p.city}}</td>
+          <td>{{p.country}}</td>
+          <td>{{p.coordinateX}}</td>
+          <td>{{p.coordinateY}}</td>
+          <td>{{p.acronym}}</td>
+          <td>{{p.type}}</td>
+          <td>
+            <a routerLink="/airport/edit/{{p.id}}" class="btn">Editar</a>
+            <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  
+

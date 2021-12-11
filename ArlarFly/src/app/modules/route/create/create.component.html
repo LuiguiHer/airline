@@ -1,0 +1,29 @@
+<div class="container">
+    <h3 class="center-align">Registrar ruta</h3>
+    <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="store()">
+    
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="Time" type="number" class="validate">
+          <label for="Time">Time</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="origin" type="text" class="validate">
+          <label for="origin">Origin</label>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="destiny" type="text" class="validate">
+          <label for="destiny">Destiny</label>
+        </div>
+      </div>
+  
+      <div class="row center-align">
+        <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
+  </div>
